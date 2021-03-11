@@ -1,0 +1,39 @@
+﻿body {
+}
+div 
+    
+
+{
+   border: 3px solid rgb(18,180,208);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    background-color: green
+}
+
+    a:hover {
+        background-color: rgb(18,180,208);
+    }
+
+
+.kékvonal {
+    background: linear-gradient(180deg,rgba(200,150,0,0) 65%,#12B4D0 65%);
+    display: inline;
+}
+
+#listak {
+    background-color: lightblue
+}
+
+.megisfeher {
+    background-color: white;
+    border-radius: 15px;
+    width: 100px;
+}
