@@ -3,29 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="hajos.css">
+    <script src="/hetedik.js"></script>
+    
     <title></title>
 </head>
 
 <body>
     <div id="kulso">
-        <div id "kerdes_szovege">
-            kérdés szövege:
+        <div id="kerdes_szovege">
+            
         </div>
         <div id="kozep">
             <div id="valaszok">
-                <div id="valasz1" class="kerdes kattinthato false">válasz1</div>
-                <div id="valasz2" class="kerdes kattinthato true">válasz2</div>
-                <div id="valasz2" class="kerdes kattinthato false">válasz3</div>
+                <button id="1" onclick="helyese()" class="kerdes kattinthato">válasz1</button>
+                <button id="2" onclick="helyese()" class="kerdes kattinthato">válasz2</button>
+                <button id="3" onclick="helyese()" class="kerdes kattinthato">válasz3</button>
             </div>
             <div id="kep">
                 <img id="kep1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" />
             </div>
         </div>
         <div id="vezerlo">
-            <div class="gomb kattinthato">Vissza</div>
-            <div class="gomb kattinthato">Előre</div>
+            <button class ="gomb kattinthato1"onclick="myFunction()">vissza</button>
+            <button class = "gomb kattinthato2" onclick="myFunction2()">tovább</button>
+
         </div>
     </div>
+   
 </body>
 
 </html>
