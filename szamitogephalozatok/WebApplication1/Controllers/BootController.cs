@@ -13,12 +13,14 @@ namespace WebApplication1.Controllers
     public class BootController : ControllerBase
     {
        [HttpGet]
-       [Route("questions/all")]
-       public ActionResult M1()
+       [Route("questions/{sorszám}")]
+       public ActionResult M1(int sorszám)
            {
             HajostesztContext context = new HajostesztContext();
 
-            var kérdések = from x in context.Questions select x.QuestionText;
+            var kérdések = (from x in context.Questions
+                            where x.QuestionId == sorszám
+                            select x).FirstOrDefault();
 
             return new JsonResult(kérdések);
         }

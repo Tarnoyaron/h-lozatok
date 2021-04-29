@@ -1,4 +1,6 @@
 ﻿
+
+
 i = 0
 function myFunction() {
     fetch('/kerdes.json')
@@ -56,5 +58,10 @@ function myFunction2() {
 
 
     };
+  
 
 }
+fetch('/kerdes.json')
+    .then(response => response.json())
+    .then(data => letöltésBefejeződött(data)
+);

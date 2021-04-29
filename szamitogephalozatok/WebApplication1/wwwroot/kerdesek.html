@@ -5,15 +5,23 @@
     <title></title>
 </head>
 <body>
-    <div id="eredmény"></div>
+    <div id="eredmeny"></div>
+
     <script>
-        fetch('questions/all')
+        fetch('/questions/all')
             .then(response => response.json())
-            .then(data => console.log(data)
+            .then(data => kiiratás(data)
+
             );
 
-
+        function kiiratás(lista) {
+            console.log(lista)
+            for (var i = 0; i < lista.length; i++) {
+                let újElem = document.createElement("div");
+                újElem.innerText = lista[i];
+                document.getElementById("eredmeny").appendChild(újElem);
+            }
+        }
     </script>
-
 </body>
 </html>
