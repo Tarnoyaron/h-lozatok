@@ -4,7 +4,7 @@ let n = 1;
 let hválaszID = 1;
 let id = 1;
 
-function letöltés(id) {
+function letöltés() {
      
     fetch(`/questions/${id}`)
         .then(r => r.json())

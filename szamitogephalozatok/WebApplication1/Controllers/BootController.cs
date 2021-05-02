@@ -24,5 +24,13 @@ namespace WebApplication1.Controllers
 
             return new JsonResult(kérdések);
         }
+        [HttpGet]
+        [Route("questions/count")]
+        public int M2() //hatékonyságnövelés
+        {
+            HajostesztContext context = new HajostesztContext();
+            int kérdésekSzáma = context.Questions.Count();
+            return kérdésekSzáma;
+        }
     }
 }

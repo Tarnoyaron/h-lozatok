@@ -1,16 +1,31 @@
-﻿
-
-let a = 2;
+﻿let a = 2;
 let i = 1;
 let n = 1;
 let hválaszID = 1;
 let id = 1;
 
-function letöltés() {
+function letöltés(questionNumber, destination) {
 
-    fetch(`/questions/${id}`)
-        .then(r => r.json())
-        .then(kérdések => adatÉrkezett(kérdések));
+    fetch(`/questions/${questionNumber}`)
+        .then(
+            result => {
+                if (!result.ok) {
+                    console.log(`hibás letöltés: ${response.status}`)
+                }
+
+                else {
+                    return result.json()
+                }
+            }
+    )
+        .then(
+            q => {
+                hotList[destination].question = q;
+                hotList[destination].goodAnswers = 0;
+                console.log(`A ${questionNumber}.kérdés letöltve a hot list ${destination}.helyére`)
+
+            }
+        )
 }
 function adatÉrkezett(kérdések) {
     console.log(kérdések)
