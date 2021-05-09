@@ -1,19 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <script src="Jsgyak.js"></script>
+    <script src="tizenegyedik.js"></script>
+    <link rel="stylesheet" href="hajos.css">
 </head>
-<body onload="letöltés()">
+<body> 
 
-    <div id="eredmeny"></div>
-    <button onclick="vissza()"></button>
-    <button onclick="tovább()"></button>
+    <div id="kérdés_szövege">xdd</div>
+    <button onclick="vissza()">vissza</button>
+    <button onclick="tovább()">tovább</button>
     <ol id="ide"></ol>
     <div id="kérdés"></div>
-    <button id="válasz1" onclick="válasz1()">válasz1</button>
-    <button id="válasz2" onclick="válasz2()">válasz2</button>
-    <button id="válasz3" onclick="válasz3()">válasz3</button>
-
+    <div id = "válaszok">
+    <button id="válasz1" onclick="válasz(1)">válasz1</button>
+    <button id="válasz2" onclick="válasz(2)">válasz2</button>
+    <button id="válasz3" onclick="válasz(3)">válasz3</button>
+    <img id="kep1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" />
+     </div>       
 
 </body>
 </html>

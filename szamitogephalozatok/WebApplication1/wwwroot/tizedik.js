@@ -1,12 +1,31 @@
-﻿let a = 2;
-let i = 1;
-let n = 1;
-let hválaszID = 1;
-let id = 1;
+﻿var hotList = [];
+var questionsInHotlist = 3;
+var displayedQuestions;
+var numberOfQuestions;
+var nexQuestion = 1;
 
-function letöltés(questionNumber, destination) {
+function init() {
+    for (let i = 0; i < questionsInHotlist; i++) {
+        let q = {
+            question: {},
+            goodAnswers = 0
 
-    fetch(`/questions/${questionNumber}`)
+
+        }
+    }
+    for (let i = 0; i < questionsInHotlist; i++) {
+        kérdésbetöltés(nexquestion, i);
+        nexQuestion++;
+
+    }
+ }
+
+
+
+
+function letöltés(id, destination) {
+
+    fetch(`/questions/${id}`)
         .then(
             result => {
                 if (!result.ok) {
