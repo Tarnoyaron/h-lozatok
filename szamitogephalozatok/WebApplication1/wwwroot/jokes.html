@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <div id="jokeList"></div>
+        <div>
+            <input id="jokeText" type="text" placeholder="Csak PC vicc" />
+        </div>
+        <button id="addButton" onclick="addVicc()">új vicc felvétele</button>
+    </form>
+    <script>
+        function addVicc()
+        {
+            fetch("postApi / jokes2",
+                {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                   
+                }).then(x => {
+                    if (x.ok) {
+                        alert("Siker");
+
+                    }
+                    else {
+                        console.log("Kudarc");
+                    }
+                });	    
+
+        }
+
+        fetch("api/jokes2")
+            .then(response => response.json())
+            .then(data => console.log(data));
+          
+    </script>
+</body>
+</html>
